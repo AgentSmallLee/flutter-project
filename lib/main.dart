@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project/ChangeNotifierDemo.dart';
+import 'package:flutter_project/InheritedWidgetDemo.dart';
+import 'package:flutter_project/LoginPage.dart';
+import 'package:flutter_project/TextController.dart';
+import 'package:flutter_project/ValueNotifierDemo.dart';
 
 import 'basic_message_channel_page.dart';
 import 'event_channel_page.dart';
+import 'method_channel_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  // runApp(const MyApp());
+  runApp(MaterialApp(
+    home: InheritedWidgetDemo(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -51,6 +60,15 @@ class HomePage extends StatelessWidget {
               subtitle: '双向字符串 / 半结构化消息通信',
               color: Colors.blue,
               page: const BasicMessageChannelPage(),
+            ),
+            const SizedBox(height: 16),
+            _buildChannelCard(
+              context,
+              icon: Icons.functions,
+              title: 'MethodChannel',
+              subtitle: '异步方法调用（Flutter → Android）',
+              color: Colors.orange,
+              page: const MethodChannelPage(),
             ),
             const SizedBox(height: 16),
             _buildChannelCard(
