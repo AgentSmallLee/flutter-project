@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_project/ChangeNotifierDemo.dart';
 import 'package:flutter_project/InheritedWidgetDemo.dart';
 import 'package:flutter_project/LoginPage.dart';
+import 'package:flutter_project/ProviderDemo.dart';
 import 'package:flutter_project/TextController.dart';
 import 'package:flutter_project/ValueNotifierDemo.dart';
 
@@ -12,7 +13,7 @@ import 'method_channel_page.dart';
 void main() {
   // runApp(const MyApp());
   runApp(MaterialApp(
-    home: InheritedWidgetDemo(),
+    home: ProviderDemo(),
   ));
 }
 
